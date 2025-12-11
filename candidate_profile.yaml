@@ -1,0 +1,185 @@
+basic_info:
+  name: "Chenghan Wu"
+  title: "Data & Web3 Growth Analyst"
+  summary: >
+    Data & Web3 growth analyst with a statistics background. I use on-chain
+    and product data to understand how users sign up, activate, and come back,
+    and I want roles where I can own dashboards, cohorts, and experiments to
+    improve retention and revenue.
+  seniority: "junior"
+  locations_preference:
+    - "Remote"
+    - "Hong Kong"
+    - "Singapore"
+    - "Shanghai"
+  open_to_relocation: true
+
+target_roles:
+  - id: "web3_growth_analytics"
+    priority: 1
+    titles:
+      - "Web3 Growth Analyst"
+      - "Web3 Data Analyst"
+      - "On-chain Data Analyst"
+      - "Crypto Research Analyst"
+    must_keywords:
+      - "data"
+      - "analytics"
+      - "SQL"
+      - "Python"
+      - "on-chain"
+      - "cohort"
+      - "retention"
+    nice_keywords:
+      - "Dune"
+      - "dashboard"
+      - "experiments"
+      - "growth"
+      - "DeFi"
+      - "DEX"
+  - id: "product_data_analyst"
+    priority: 2
+    titles:
+      - "Product Data Analyst"
+      - "Growth Data Analyst"
+    must_keywords:
+      - "SQL"
+      - "Python"
+      - "funnel"
+      - "cohort"
+      - "A/B"
+    nice_keywords:
+      - "retention"
+      - "activation"
+      - "experimentation"
+
+skills:
+  analytics:
+    - "Cohort and retention analysis (7/30-day retention, repeat rate, DAU/MAU)."
+    - "Funnels and conversion analysis for growth and GMV."
+    - "TVL / volume tracking and protocol-level KPIs for DeFi/DEX."
+  tools:
+    - "Python (Pandas, NumPy)."
+    - "SQL (joins, window functions)."
+    - "Dune Analytics."
+    - "Tableau."
+    - "Power BI."
+    - "Excel (pivots, VLOOKUP, basic automation)."
+  stats_ml:
+    - "Classical statistics (hypothesis testing, confidence intervals)."
+    - "Regression models (linear, logistic)."
+    - "Time-series and forecasting basics."
+  web3:
+    - "General EVM / L1–L2 concepts."
+    - "DeFi primitives (DEX, perp DEX, lending)."
+    - "On-chain behavior analysis (users, volume, TVL, incentives)."
+  languages:
+    - name: "Chinese"
+      level: "native"
+    - name: "English"
+      level: "advanced"
+    - name: "Japanese"
+      level: "intermediate (N2 exam track)"
+  soft_skills:
+    - "Analytical writing and documentation."
+    - "Clear communication of metrics to non-technical stakeholders."
+    - "Self-directed, comfortable with async remote work."
+
+experience:
+  - name: "Gubo Technologies"
+    role: "Data Engineer Intern"
+    location: "China (semiconductor clients)"
+    start: "2025-09"
+    end: "present"
+    domain: "semiconductor / B2B analytics platform"
+    stack:
+      - "Python"
+      - "ETL"
+      - "STDF/CSV test data"
+      - "OneData analytics platform"
+    highlights:
+      - "Audited data integrity and latency for multiple semiconductor clients, tracing issues end-to-end (file delivery, parsing, loading) and helping cut ingestion latency and improve data completeness."
+      - "Built Python ETL pipelines for STDF/CSV test data and scheduling scripts to load cleaned data into the OneData analytics platform."
+      - "Created initial yield analysis views (Pareto charts, wafer maps) to surface key failure modes and anomalous wafer regions for production-line investigations."
+  - name: "ByteDance – Douyin Feed Business"
+    role: "Data Analyst Intern"
+    location: "China"
+    start: "2024-07"
+    end: "2024-08"
+    domain: "e-commerce / content platform"
+    stack:
+      - "SQL"
+      - "Python"
+      - "Tableau"
+      - "Power BI"
+    highlights:
+      - "Investigated GMV anomalies in the healthcare vertical; built funnels and clustering to diagnose churn drivers, contributing to product changes that helped grow sales."
+      - "Cleaned and unified tens of thousands of multi-source records using SQL and Python, then built stepwise drop-off views and user segments to find high-value and high-risk cohorts."
+      - "Built dashboards covering GMV, paid orders, payment channels and engagement so business and ops teams could track performance on their own."
+
+projects:
+  - name: "Uniswap — 90-Day User Retention & Growth Analytics (Dune)"
+    type: "on-chain_growth_analytics"
+    start: "2025-09"
+    end: "2025-11"
+    stack:
+      - "Dune SQL"
+      - "cohort analysis"
+      - "retention metrics"
+      - "growth dashboards"
+    details:
+      - "Analyzed 90 days of Uniswap activity on Ethereum (about 1.14M new users), grouped users by first swap week and tracked activity over time."
+      - "Measured key growth metrics such as 7-day retention (~10.8%), 30-day retention (~5.7%), and repeat-user rate (~38.8%), and highlighted the drop-off after week one as the main opportunity."
+      - "Built a one-page Dune dashboard (new users, cohort heatmap, retention curve, KPI cards) so non-technical stakeholders can quickly see acquisition and retention performance."
+  - name: "Hyperliquid Perp DEX Project Analysis"
+    type: "defi_research"
+    start: "2025-07"
+    end: "2025-09"
+    stack:
+      - "market data"
+      - "DeFi research"
+      - "tokenomics"
+    details:
+      - "Analyzed Hyperliquid’s custom L1 design and orderbook-based perp exchange, benchmarking against GMX/dYdX on performance, capital efficiency and decentralization trade-offs."
+      - "Used public data on trading volume, open interest, TVL and perp DEX market share to explain how Hyperliquid scaled to a leading share and linked growth to incentives, vault design and liquidity depth."
+      - "Assessed HYPE token allocation, buybacks, staking and treasury/admin incidents to judge how its incentive and governance design affect sustainability, risk and user behavior."
+
+education:
+  - degree: "M.S. in Statistical Practice"
+    institution: "Boston University"
+    location: "Boston, USA"
+    gpa: 3.69
+    start: "2023-09"
+    end: "2025-01"
+  - degree: "B.S. in Statistics"
+    institution: "University of Wisconsin–Madison"
+    location: "Madison, USA"
+    gpa: 3.71
+    start: "2019-09"
+    end: "2023-05"
+
+preferences:
+  company_stage:
+    preferred:
+      - "seed"
+      - "series A"
+      - "series B"
+  company_types:
+    - "DeFi protocol / DEX / perp DEX"
+    - "On-chain analytics / infra"
+    - "Data-driven Web3 products"
+  work_style:
+    remote_first: true
+    async_friendly: true
+
+filters:
+  hard_block:
+    - "pure Solidity / smart contract engineering roles"
+    - "senior 5+ years data roles"
+    - "pure sales / BD without any analytics responsibility"
+  soft_block:
+    - "heavily BD-focused positions with only light data usage"
+  must_have:
+    - "some English usage in product or team communication"
+  nice_to_have:
+    - "explicit responsibility for dashboards, cohorts, retention or experimentation"
