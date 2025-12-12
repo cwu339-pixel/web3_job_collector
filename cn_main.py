@@ -17,6 +17,7 @@ load_dotenv()
 
 
 def main() -> None:
+    """Fetch CN/HK jobs using env-configured settings and persist to CSV."""
     output_path = os.getenv("CN_OUTPUT_PATH", "cn_web3_jobs.csv")
     max_jobs_per_source = int(os.getenv("CN_MAX_JOBS_PER_SOURCE", "200"))
     cake_locations = [loc.strip() for loc in os.getenv("CAKE_WEB3_LOCATIONS", "Hong Kong S.A.R").split(",") if loc.strip()]

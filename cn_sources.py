@@ -1,10 +1,9 @@
-"""Chinese / Hong Kong Web3 job sources."""
+"""Chinese / Hong Kong Web3 job sources (requests + BeautifulSoup only)."""
 
 from __future__ import annotations
 
 import datetime as dt
 import logging
-import os
 from dataclasses import dataclass, field
 from typing import Callable, List, Optional, Sequence, Tuple
 
@@ -37,6 +36,7 @@ class Job:
 
 
 def _parse_datetime(value: Optional[str]) -> Optional[dt.datetime]:
+    """Best-effort parsing for simple date strings found on CN/HK sites."""
     if not value:
         return None
     for fmt in ("%d %b %Y", "%Y-%m-%d", "%Y/%m/%d"):
@@ -65,6 +65,7 @@ def _get_soup(url: str) -> Optional[BeautifulSoup]:
 
 
 def _extract_jobsdb_cards(soup: BeautifulSoup) -> List[Job]:
+    """Extract job cards from the JobsDB HK Web3 listing."""
     jobs: List[Job] = []
     cards = soup.select("article") or []
     for card in cards:
@@ -97,6 +98,7 @@ def _extract_jobsdb_cards(soup: BeautifulSoup) -> List[Job]:
 
 
 def fetch_jobsdb_hk_web3(limit: int = 200) -> List[Job]:
+    """Fetch Web3 jobs from JobsDB HK Web3 listing with pagination."""
     jobs: List[Job] = []
     page = 1
     while len(jobs) < limit:
@@ -120,6 +122,7 @@ def fetch_jobsdb_hk_web3(limit: int = 200) -> List[Job]:
 
 
 def fetch_cake_web3(max_jobs: int = 200, locations: Optional[Sequence[str]] = None) -> List[Job]:
+    """Fetch Web3 jobs from Cake for the provided locations."""
     jobs: List[Job] = []
     locations = locations or ["Hong Kong S.A.R"]
     for loc in locations:
@@ -167,6 +170,7 @@ def fetch_cake_web3(max_jobs: int = 200, locations: Optional[Sequence[str]] = No
 
 
 def fetch_all_cn(limit_per_source: int = 200, cake_locations: Optional[Sequence[str]] = None) -> List[Job]:
+    """Fetch all configured CN/HK sources and deduplicate."""
     sources: List[Tuple[str, Callable[[int], List[Job]]]] = [
         ("jobsdb_hk", fetch_jobsdb_hk_web3),
         ("cake_web3", lambda limit: fetch_cake_web3(limit, locations=cake_locations)),

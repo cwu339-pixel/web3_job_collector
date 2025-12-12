@@ -1,7 +1,11 @@
 .env
+*.env
 *.csv
 __pycache__/
 *.pyc
 .venv/
 venv/
 .DS_Store
+.idea/
+.vscode/
+profile.yaml
